@@ -21,3 +21,6 @@ Thumbs.db
 staticfiles/
 media/
 
+# Material personal de estudio (no publicar)
+GUIA_EVALUACION.md
+
