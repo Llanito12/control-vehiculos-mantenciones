@@ -13,7 +13,6 @@ La aplicación establece la base técnica de una plataforma destinada a centrali
 
 ```powershell
 git clone https://github.com/Llanito12/control-vehiculos-mantenciones.git
-cd control-vehiculos-mantenciones
 python -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
