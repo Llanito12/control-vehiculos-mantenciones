@@ -12,14 +12,17 @@ La aplicación establece la base técnica de una plataforma destinada a centrali
 ## Instalación en Windows PowerShell
 
 ```powershell
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/Llanito12/control-vehiculos-mantenciones.git
 cd control-vehiculos-mantenciones
 python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
+
+`Set-ExecutionPolicy -Scope Process` habilita la activación únicamente en la terminal actual y no cambia permanentemente la configuración del equipo.
 
 Luego abre `http://127.0.0.1:8000/`. Para comprobar el error personalizado, visita `http://127.0.0.1:8000/ruta-inexistente/`.
 
