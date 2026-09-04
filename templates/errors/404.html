@@ -1,0 +1,15 @@
+{% extends "flota/base.html" %}
+
+{% block title %}Página no encontrada · {{ nombre_proyecto }}{% endblock %}
+
+{% block content %}
+<p class="error-code">404</p>
+<p class="eyebrow">Ruta fuera del mapa</p>
+<h1>No encontramos esa página</h1>
+<p class="lead">
+    La dirección <strong>{{ ruta_solicitada }}</strong> no existe en el sistema de control de flota.
+    Puedes volver al panel de bienvenida y continuar desde allí.
+</p>
+<a class="button" href="{% url 'flota:inicio' %}">Volver al inicio</a>
+{% endblock %}
+

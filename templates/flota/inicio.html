@@ -1,0 +1,22 @@
+{% extends "flota/base.html" %}
+
+{% block title %}{{ nombre_proyecto }}{% endblock %}
+
+{% block content %}
+<p class="eyebrow">Evaluación 1 · Proyecto asignado</p>
+<h1>{{ nombre_proyecto }}</h1>
+<p class="lead">{{ descripcion }}</p>
+<p class="status">{{ estado }}</p>
+
+<section class="grid" aria-label="Módulos planificados">
+    {% for modulo in modulos %}
+    <article class="card">
+        <span>Módulo {{ forloop.counter }}</span>
+        <strong>{{ modulo }}</strong>
+    </article>
+    {% empty %}
+    <p>No hay módulos disponibles.</p>
+    {% endfor %}
+</section>
+{% endblock %}
+
